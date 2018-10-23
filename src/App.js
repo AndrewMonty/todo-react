@@ -90,21 +90,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          Todo List  
-        </header>
-
-        <form onSubmit={this.handleSubmit}>
-          <input type="text" name="task"
-            value={this.state.newTask}
-            onChange={this.handleChange}></input>
-          <button type="submit">submit</button>
-        </form>
+      <div>
+        <h1>Todo List</h1>
 
         <ul>
           {this.state.tasks}
         </ul>
+
+        <form onSubmit={this.handleSubmit}>
+          <input type="text" name="task"
+            value={this.state.newTask}
+            onChange={this.handleChange}>
+          </input>
+          <button type="submit">submit</button>
+        </form>
       </div>
     );
   }
