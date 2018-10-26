@@ -93,16 +93,17 @@ class App extends Component {
       <div>
         <h1>Todo List</h1>
 
-        <ul>
+        <ul className="tasks">
           {this.state.tasks}
         </ul>
 
         <form onSubmit={this.handleSubmit}>
           <input type="text" name="task"
+            placeholder="new task"
             value={this.state.newTask}
             onChange={this.handleChange}>
           </input>
-          <button type="submit">submit</button>
+          <button type="submit">save</button>
         </form>
       </div>
     );

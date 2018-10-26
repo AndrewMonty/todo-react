@@ -9,12 +9,12 @@ class Task extends Component {
     render() {
         return (
             <li className="task">
-                { this.props.task.name }
                 <input type="checkbox" 
                     defaultChecked={this.props.task.complete}
                     ref="complete"
                     onChange={this.onChange}>
                 </input>
+                { this.props.task.name }
             </li>
         );
     }
